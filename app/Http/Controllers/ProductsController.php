@@ -15,7 +15,6 @@ class ProductsController extends Controller
 
     public function search(ProductSearchRequest $request)
     {
-        //$products = Products::search($request)->paginate(5);
         $products = Products::search($request);
         return view('products', compact('products', 'request'));
     }
